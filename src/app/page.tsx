@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import GreetingModal from "@/components/GreetingModal";
+import Skills from "@/components/Skills";
+import Tools from "@/components/Tools";
 
 const page = () => {
   const [showGreeting, setShowGreeting] = useState(true);
@@ -11,6 +13,8 @@ const page = () => {
     <motion.div className="bg-slate-900 min-h-screen text-white">
       <Header />
       <Content />
+      <Skills />
+      <Tools />
 
       {showGreeting && (
         <GreetingModal onClick={() => setShowGreeting(false)} />
