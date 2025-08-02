@@ -1,0 +1,20 @@
+.underlineHover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.underlineHover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #64748b;
+  transition: width 0.3s ease;
+}
+
+.underlineHover:hover::after {
+  width: 100%;
+}
