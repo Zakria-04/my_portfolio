@@ -7,6 +7,8 @@ import GreetingModal from "@/components/GreetingModal";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
 import Resume from "@/components/Resume";
+import Projects from "@/components/Projects";
+import Links from "@/components/Links";
 
 const page = () => {
   const [showGreeting, setShowGreeting] = useState(true);
@@ -17,6 +19,8 @@ const page = () => {
       <Skills />
       <About />
       <Resume />
+      <Projects />
+      <Links />
 
       {showGreeting && (
         <GreetingModal onClick={() => setShowGreeting(false)} />
