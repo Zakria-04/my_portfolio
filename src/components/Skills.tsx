@@ -2,40 +2,148 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { skillsData } from "@/assets/data/skillsData";
+import { FiCode, FiLayers, FiCpu, FiDatabase } from "react-icons/fi";
 
 const Skills = () => {
+  const getLevelWidth = (level: string) => {
+    switch (level) {
+      case "beginner":
+        return 40;
+      case "intermediate":
+        return 70;
+      case "advanced":
+        return 90;
+      case "expert":
+        return 100;
+      default:
+        return 50;
+    }
+  };
+
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case "beginner":
+        return "bg-blue-400";
+      case "intermediate":
+        return "bg-blue-500";
+      case "advanced":
+        return "bg-blue-600";
+      case "expert":
+        return "bg-blue-700";
+      default:
+        return "bg-blue-500";
+    }
+  };
+
+  const skillCategories = [
+    {
+      title: "Frontend",
+      icon: <FiCode className="w-5 h-5" />,
+      skills: skillsData.filter((skill) => skill.category === "frontend"),
+    },
+    {
+      title: "Backend",
+      icon: <FiDatabase className="w-5 h-5" />,
+      skills: skillsData.filter((skill) => skill.category === "backend"),
+    },
+    {
+      title: "Other Technologies",
+      icon: <FiLayers className="w-5 h-5" />,
+      skills: skillsData.filter(
+        (skill) =>
+          !["frontend", "backend", "devops"].includes(skill.category || "")
+      ),
+    },
+  ];
+
   return (
-    <motion.div
-      className="p-7"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.h3 className="text-2xl font-bold">My Skills</motion.h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
-        {skillsData.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="bg-slate-800 rounded-xl p-4 flex flex-col items-center shadow-md hover:scale-105 transition-transform duration-200"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <Image
-              src={skill.icon}
-              alt={skill.name}
-              width={50}
-              height={50}
-              className="w-12 h-12 mb-2"
-            />
-            <h4 className="text-white font-semibold">{skill.name}</h4>
-            <p className="text-slate-400 text-sm">
-              ex. {skill.experience || "Experience not specified"}
+    <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-500 bg-blue-500/10 rounded-full">
+            TECHNICAL SKILLS
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            My <span className="text-blue-400">Expertise</span>
+          </h2>
+          <div className="max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400">
+              Technologies I've worked with and mastered through real-world
+              projects
             </p>
-          </motion.div>
-        ))}
+          </div>
+        </motion.div>
+
+        <div className="space-y-12">
+          {skillCategories.map((category, catIndex) => (
+            <motion.div
+              key={catIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 + catIndex * 0.1 }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400">
+                  {category.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white">
+                  {category.title}
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <motion.div
+                    key={skillIndex}
+                    layout
+                    className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-5 flex flex-col items-center border border-slate-700/50 hover:border-blue-500/30 transition-all"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: 0.1 + skillIndex * 0.05,
+                    }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="relative w-14 h-14 mb-4 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-all duration-300 transform group-hover:scale-110"></div>
+                      <Image
+                        src={skill.icon}
+                        alt={skill.name}
+                        width={28}
+                        height={28}
+                        className="relative z-10 w-7 h-7 object-contain"
+                      />
+                    </div>
+                    <h4 className="text-white font-medium text-center">
+                      {skill.name}
+                    </h4>
+                    {skill.experience && (
+                      <p className="text-xs text-slate-400 mt-1 text-center">
+                        {skill.experience}
+                      </p>
+                    )}
+                    {skill.level && (
+                      <div className="w-full mt-3 h-1 bg-slate-700 rounded-full overflow-hidden">
+                        <div
+                          className={`h-full ${getLevelColor(skill.level)} transition-all duration-300 ease-in-out`}
+                          style={{ width: `${getLevelWidth(skill.level)}%` }}
+                        ></div>
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </motion.div>
+    </section>
   );
 };
 

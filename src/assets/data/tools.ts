@@ -25,21 +25,30 @@ export const toolsData = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
   },
   {
-    id: 7,
+    id: 6,
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
-    id: 8,
+    id: 7,
     name: "GitHub",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
   {
-    id: 9,
+    id: 8,
     name: "Redux",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   },
-
+  {
+    id: 9,
+    name: "Zustand",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg",
+  },
+  {
+    id: 10,
+    name: "useContext",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
   {
     id: 11,
     name: "Figma",
@@ -52,7 +61,7 @@ export const toolsData = [
   },
 
   {
-    id: 14,
+    id: 13,
     name: "Sass",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
   },

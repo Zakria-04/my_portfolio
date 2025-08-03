@@ -5,7 +5,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import GreetingModal from "@/components/GreetingModal";
 import Skills from "@/components/Skills";
-import Tools from "@/components/Tools";
+import About from "@/components/About";
+import Resume from "@/components/Resume";
 
 const page = () => {
   const [showGreeting, setShowGreeting] = useState(true);
@@ -14,7 +15,8 @@ const page = () => {
       <Header />
       <Content />
       <Skills />
-      <Tools />
+      <About />
+      <Resume />
 
       {showGreeting && (
         <GreetingModal onClick={() => setShowGreeting(false)} />
