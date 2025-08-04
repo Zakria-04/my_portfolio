@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiCode, FiCpu, FiTrendingUp } from "react-icons/fi";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -72,18 +73,18 @@ const Content = () => {
             className="flex flex-wrap justify-center gap-4"
             variants={fadeInVariant}
           >
-            <a
+            <Link
               href="#projects"
               className="px-8 py-3.5 text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300"
             >
               View My Work
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
               className="px-8 py-3.5 text-sm font-medium text-white bg-transparent hover:bg-slate-800 border border-slate-600 rounded-lg transition-all duration-300"
             >
               Get In Touch
-            </a>
+            </Link>
           </motion.div>
         </div>
 
@@ -101,12 +102,14 @@ const Content = () => {
             {
               icon: <FiCpu className="w-6 h-6" />,
               title: "Backend Skills",
-              description: "Node.js, Express, MongoDB, and REST/GraphQL APIs",
+              description:
+                "Node.js, Express, MongoDB, TypeScript, and REST APIs",
             },
             {
               icon: <FiTrendingUp className="w-6 h-6" />,
-              title: "DevOps Aware",
-              description: "Docker, CI/CD, and cloud deployment experience",
+              title: "Growth Mindset",
+              description:
+                "Driven by curiosity—always exploring new technologies and ready to tackle any challenge that helps me grow as a developer.",
             },
           ].map((item, index) => (
             <motion.div

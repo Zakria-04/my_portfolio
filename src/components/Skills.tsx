@@ -7,6 +7,8 @@ import { FiCode, FiLayers, FiCpu, FiDatabase } from "react-icons/fi";
 const Skills = () => {
   const getLevelWidth = (level: string) => {
     switch (level) {
+      case "basics":
+        return 10;
       case "beginner":
         return 40;
       case "intermediate":
@@ -22,6 +24,8 @@ const Skills = () => {
 
   const getLevelColor = (level: string) => {
     switch (level) {
+      case "basics":
+        return "bg-blue-300";
       case "beginner":
         return "bg-blue-400";
       case "intermediate":
@@ -131,7 +135,9 @@ const Skills = () => {
                     {skill.level && (
                       <div className="w-full mt-3 h-1 bg-slate-700 rounded-full overflow-hidden">
                         <div
-                          className={`h-full ${getLevelColor(skill.level)} transition-all duration-300 ease-in-out`}
+                          className={`h-full ${getLevelColor(
+                            skill.level
+                          )} transition-all duration-300 ease-in-out`}
                           style={{ width: `${getLevelWidth(skill.level)}%` }}
                         ></div>
                       </div>

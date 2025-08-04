@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
+import Link from "next/link";
 
 const projectsData = [
   {
@@ -101,24 +102,24 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-3">
                     {project.github && (
-                      <a
+                      <Link
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors"
                       >
                         <FiGithub className="w-4 h-4" />
-                      </a>
+                      </Link>
                     )}
                     {project.live && (
-                      <a
+                      <Link
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors"
                       >
                         <FiExternalLink className="w-4 h-4" />
-                      </a>
+                      </Link>
                     )}
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   FiDownload,
@@ -102,7 +103,7 @@ const Resume = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
+            <Link
               href="/Zakaria_Abdelghani_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -110,15 +111,15 @@ const Resume = () => {
             >
               <FiExternalLink className="w-4 h-4" />
               View Full Resume
-            </a>
-            <a
+            </Link>
+            <Link
               href="/Zakaria_Abdelghani_Resume.pdf"
               download
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-transparent hover:bg-slate-800 border border-slate-600 rounded-lg transition-all"
             >
               <FiDownload className="w-4 h-4" />
               Download PDF
-            </a>
+            </Link>
           </div>
         </div>
       </div>
