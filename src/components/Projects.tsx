@@ -6,38 +6,14 @@ import Link from "next/link";
 const projectsData = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured online store with cart, payments, and admin dashboard",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/ecommerce.jpg",
-    github: "#",
-    live: "#",
-    category: "fullstack",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description:
-      "Productivity app with drag-and-drop interface and team collaboration",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Firebase"],
-    image: "/taskapp.jpg",
+    title: "portfolio website",
+    description: "Personal portfolio website showcasing my projects and skills",
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    image: "/portfolio.jpg",
     github: "#",
     live: "#",
     category: "frontend",
   },
-  {
-    id: 3,
-    title: "API Microservice",
-    description:
-      "Scalable backend service with authentication and rate limiting",
-    tags: ["Node.js", "Express", "JWT", "Redis"],
-    image: "/api.jpg",
-    github: "#",
-    live: "#",
-    category: "backend",
-  },
-  // Add more projects as needed
 ];
 
 const Projects = () => {

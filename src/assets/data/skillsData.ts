@@ -101,7 +101,7 @@ export const skillsData = [
     category: "backend",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     experience: calculateExperience("2024-06-01"),
-    level: "advanced",
+    level: "expert",
   },
   {
     id: 2,
@@ -109,7 +109,7 @@ export const skillsData = [
     category: "backend",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     experience: calculateExperience("2024-06-01"),
-    level: "advanced",
+    level: "expert",
   },
   {
     id: 3,

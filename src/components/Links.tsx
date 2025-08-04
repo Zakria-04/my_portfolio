@@ -50,7 +50,7 @@ const Links = () => {
   ];
 
   return (
-    <section id="links" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-500 bg-blue-500/10 rounded-full">
