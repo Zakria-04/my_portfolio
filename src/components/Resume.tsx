@@ -16,9 +16,8 @@ const Resume = () => {
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "MongoDB", "PostgreSQL", "GraphQL"],
+      items: ["Node.js", "Express", "MongoDB", "TypeScript", "NoSQL"],
     },
-    { category: "DevOps", items: ["Docker", "AWS", "CI/CD", "Git", "Linux"] },
   ];
 
   return (

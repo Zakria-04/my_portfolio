@@ -29,12 +29,12 @@ const aboutData = [
 
 const stats = [
   {
-    value: "20+",
+    value: "5+",
     label: "Projects Completed",
     icon: <FiCode className="w-5 h-5" />,
   },
   {
-    value: "3+",
+    value: "2+",
     label: "Years Experience",
     icon: <FiTrendingUp className="w-5 h-5" />,
   },

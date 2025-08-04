@@ -23,7 +23,7 @@ const page = () => {
       <Links />
 
       {showGreeting && (
-        <GreetingModal onClick={() => setShowGreeting(false)} />
+        <GreetingModal onClose={() => setShowGreeting(false)} />
       )}
     </motion.div>
   );
