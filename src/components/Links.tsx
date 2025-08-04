@@ -3,47 +3,45 @@ import { motion } from "framer-motion";
 import {
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiMail,
   FiFileText,
 } from "react-icons/fi";
-import { SiLeetcode, SiCodepen } from "react-icons/si";
 import Badge from "./Badge";
 import SectionHeader from "./SectionHeader";
 
-const Links = () => {
-  const socialLinks = [
-    {
-      name: "GitHub",
-      icon: <FiGithub className="w-5 h-5" />,
-      url: "https://github.com/yourusername",
-      color: "from-gray-900 to-gray-700",
-      hover: "hover:shadow-[0_0_20px_rgba(110,118,129,0.4)]",
-    },
-    {
-      name: "LinkedIn",
-      icon: <FiLinkedin className="w-5 h-5" />,
-      url: "https://linkedin.com/in/yourprofile",
-      color: "from-blue-700 to-blue-900",
-      hover: "hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]",
-    },
-    {
-      name: "Email",
-      icon: <FiMail className="w-5 h-5" />,
-      url: "mailto:your.email@example.com",
-      color: "from-rose-600 to-rose-800",
-      hover: "hover:shadow-[0_0_20px_rgba(225,29,72,0.4)]",
-    },
-    {
-      name: "Resume",
-      icon: <FiFileText className="w-5 h-5" />,
-      url: "/your-resume.pdf",
-      color: "from-emerald-600 to-emerald-800",
-      hover: "hover:shadow-[0_0_20px_rgba(5,150,105,0.4)]",
-      download: true,
-    },
-  ];
+const socialLinks = [
+  {
+    name: "GitHub",
+    icon: <FiGithub className="w-5 h-5" />,
+    url: "https://github.com/Zakria-04",
+    color: "from-gray-900 to-gray-700",
+    hover: "hover:shadow-[0_0_20px_rgba(110,118,129,0.4)]",
+  },
+  {
+    name: "LinkedIn",
+    icon: <FiLinkedin className="w-5 h-5" />,
+    url: "https://www.linkedin.com/in/zakaria-abdelghani-a04170309/",
+    color: "from-blue-700 to-blue-900",
+    hover: "hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]",
+  },
+  {
+    name: "Email",
+    icon: <FiMail className="w-5 h-5" />,
+    url: "mailto:zakriaabdelgny04@gmail.com",
+    color: "from-rose-600 to-rose-800",
+    hover: "hover:shadow-[0_0_20px_rgba(225,29,72,0.4)]",
+  },
+  {
+    name: "Resume",
+    icon: <FiFileText className="w-5 h-5" />,
+    url: "/your-resume.pdf",
+    color: "from-emerald-600 to-emerald-800",
+    hover: "hover:shadow-[0_0_20px_rgba(5,150,105,0.4)]",
+    download: true,
+  },
+];
 
+const Links = () => {
   return (
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div className="max-w-4xl mx-auto">

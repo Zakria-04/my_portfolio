@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
-import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi";
 import MobileNav from "./MobileNav";
 import { smoothScroll } from "@/assets/utils";
 
@@ -27,7 +26,11 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <button id="home" onClick={() => smoothScroll("#home")} className="cursor-pointer">
+            <button
+              id="home"
+              onClick={() => smoothScroll("#home")}
+              className="cursor-pointer"
+            >
               <h1 className="text-2xl font-bold text-white">
                 <span className="text-blue-400">Z</span>akaria
                 <span className="text-blue-400">.</span>
@@ -80,7 +83,6 @@ const Header = () => {
           {isOpen && (
             <MobileNav
               navData={navData}
-              isOpen={isOpen}
               setIsOpen={setIsOpen}
             />
           )}

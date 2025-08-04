@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { skillsData } from "@/assets/data/skillsData";
-import { FiCode, FiLayers, FiCpu, FiDatabase } from "react-icons/fi";
+import { FiCode, FiLayers, FiDatabase } from "react-icons/fi";
 import Badge from "./Badge";
 import SectionHeader from "./SectionHeader";
 

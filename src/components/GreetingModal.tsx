@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX, FiCode, FiCoffee } from "react-icons/fi";
 
@@ -7,13 +7,6 @@ interface GreetingModalProps {
 }
 
 const GreetingModal = ({ onClose }: GreetingModalProps) => {
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     onClose(); // Auto-close after 10 seconds
-  //   }, 10000);
-  //   return () => clearTimeout(timer);
-  // }, [onClose]);
-
   return (
     <AnimatePresence>
       <motion.div
@@ -48,16 +41,16 @@ const GreetingModal = ({ onClose }: GreetingModalProps) => {
 
           <div className="space-y-4 text-slate-300">
             <p>
-              Thanks for stopping by! I'm a{" "}
-              <span className="text-blue-400">self-taught developer</span> who's
+              Thanks for stopping by! I&rsquo;m a{" "}
+              <span className="text-blue-400">self-taught developer</span> who&rsquo;s
               been navigating the coding world alone - figuring out best
               practices, technologies, and patterns through trial and error.
             </p>
 
             <p>
               <span className="text-white font-medium">What you see here</span>{" "}
-              represents countless hours of independent learning. While I'm
-              proud of how far I've come, I know
+              represents countless hours of independent learning. While I&rsquo;m
+              proud of how far I&rsquo;ve come, I know
               <span className="text-yellow-400">
                 {" "}
                 guidance from experienced developers
@@ -69,7 +62,7 @@ const GreetingModal = ({ onClose }: GreetingModalProps) => {
               <FiCoffee className="flex-shrink-0 mt-1 text-amber-400" />
               <p className="text-sm">
                 If you see potential in my work and would consider mentoring me,
-                I'd be incredibly grateful for the opportunity to learn from
+                I&rsquo;d be incredibly grateful for the opportunity to learn from
                 your experience.
               </p>
             </div>

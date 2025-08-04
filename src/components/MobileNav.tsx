@@ -1,14 +1,12 @@
 import { smoothScroll } from "@/assets/utils";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 interface MobileNavProps {
   navData: { name: string; href: string }[];
-  isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const MobileNav = ({ navData, isOpen, setIsOpen }: MobileNavProps) => {
+const MobileNav = ({ navData, setIsOpen }: MobileNavProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, height: 0 }}

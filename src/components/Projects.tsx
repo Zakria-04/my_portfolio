@@ -4,6 +4,7 @@ import { FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
 import Link from "next/link";
 import Badge from "./Badge";
 import SectionHeader from "./SectionHeader";
+import Image from "next/image";
 
 const projectsData = [
   {
@@ -71,8 +72,10 @@ const Projects = () => {
               className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/30 transition-all"
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={project.image}
+                  width={400}
+                  height={300}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -132,7 +135,7 @@ const Projects = () => {
             whileTap={{ scale: 0.95 }}
           >
             <FiCode className="mr-2 w-4 h-4" />
-            Want to see more? Let's talk about your project
+            Want to see more? Let&apos;s talk about your project
           </motion.a>
         </div>
       </div>
