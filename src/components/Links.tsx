@@ -9,6 +9,7 @@ import {
 } from "react-icons/fi";
 import { SiLeetcode, SiCodepen } from "react-icons/si";
 import Badge from "./Badge";
+import SectionHeader from "./SectionHeader";
 
 const Links = () => {
   const socialLinks = [
@@ -51,12 +52,13 @@ const Links = () => {
             text="CONNECT WITH ME"
             className="text-blue-500 py-1 px-3 mb-4"
           />
-          <h2 className="text-4xl font-bold text-white mb-4">
-            My <span className="text-blue-400">Digital Presence</span>
-          </h2>
-          <p className="text-lg text-slate-400 max-w-xl mx-auto">
-            Find me on these platforms or download my resume for more details.
-          </p>
+          <SectionHeader
+            title="My"
+            highlightedText="Digital Presence"
+            description="Find me on these platforms or download my resume for more details."
+            TitleClassName="text-4xl font-bold mb-4"
+            descriptionClassName="text-lg text-slate-400 max-w-xl mx-auto"
+          />
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">

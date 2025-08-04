@@ -4,6 +4,7 @@ import Image from "next/image";
 import { skillsData } from "@/assets/data/skillsData";
 import { FiCode, FiLayers, FiCpu, FiDatabase } from "react-icons/fi";
 import Badge from "./Badge";
+import SectionHeader from "./SectionHeader";
 
 const Skills = () => {
   const getLevelWidth = (level: string) => {
@@ -75,15 +76,13 @@ const Skills = () => {
             className="text-blue-500 py-1 px-3 mb-4"
           />
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            My <span className="text-blue-400">Expertise</span>
-          </h2>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-slate-400">
-              Technologies I've worked with and mastered through real-world
-              projects
-            </p>
-          </div>
+          <SectionHeader
+            title="My"
+            highlightedText="Expertise"
+            description="Technologies I've worked with and mastered through real-world projects"
+            TitleClassName="text-4xl md:text-5xl mb-4"
+            descriptionClassName="text-lg text-slate-400"
+          />
         </motion.div>
 
         <div className="space-y-12">

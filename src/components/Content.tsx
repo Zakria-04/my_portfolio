@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FiCode, FiCpu, FiTrendingUp } from "react-icons/fi";
 import Link from "next/link";
 import Badge from "./Badge";
+import SectionHeader from "./SectionHeader";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -72,21 +73,16 @@ const Content = () => {
             className="text-blue-400 tracking-wider py-1.5 px-4 mb-6"
           />
 
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
-            variants={itemVariants}
-          >
-            Crafting Digital <span className="text-blue-400">Experiences</span>
-          </motion.h1>
-
-          <motion.p
-            className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
-            variants={itemVariants}
-          >
-            I'm Zakaria Abdelghani, a passionate developer specializing in
+          <SectionHeader
+            title="Crafting Digital"
+            highlightedText="Experiences"
+            description="I'm Zakaria Abdelghani, a passionate developer specializing in
             modern web technologies. I build performant, accessible applications
-            with clean, maintainable code.
-          </motion.p>
+            with clean, maintainable code."
+            TitleClassName="text-4xl md:text-6xl mb-6 leading-tight"
+            descriptionClassName="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+            variants={itemVariants}
+          />
 
           <motion.div
             className="flex flex-wrap justify-center gap-4"

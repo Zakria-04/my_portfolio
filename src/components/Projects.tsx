@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
 import Link from "next/link";
 import Badge from "./Badge";
+import SectionHeader from "./SectionHeader";
 
 const projectsData = [
   {
@@ -32,13 +33,13 @@ const Projects = () => {
         <div className="text-center mb-16">
           <Badge text="MY WORK" className="text-blue-500 py-1 px-3 mb-4" />
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured <span className="text-blue-400">Projects</span>
-          </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Here are some of my selected works. Each project represents unique
-            challenges and solutions.
-          </p>
+          <SectionHeader
+            title="Featured"
+            highlightedText="Projects"
+            description="Here are some of my selected works. Each project represents unique challenges and solutions."
+            TitleClassName="text-4xl md:text-5xl mb-4"
+            descriptionClassName="text-lg text-slate-400 max-w-2xl mx-auto"
+          />
         </div>
 
         {/* Filter Buttons */}

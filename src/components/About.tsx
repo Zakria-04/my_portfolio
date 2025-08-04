@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiUser, FiAward, FiCode, FiTrendingUp } from "react-icons/fi";
 import Badge from "./Badge";
+import SectionHeader from "./SectionHeader";
 
 const aboutData = [
   {
@@ -58,15 +59,13 @@ const About = () => {
         >
           <Badge text="INTRODUCTION" className="text-blue-500 py-1 px-3 mb-4" />
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About <span className="text-blue-400">Me</span>
-          </h2>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-slate-400">
-              Get to know the developer behind the code - my journey, skills,
-              and what drives me.
-            </p>
-          </div>
+          <SectionHeader
+            title="About"
+            highlightedText="Me"
+            description="Get to know the developer behind the code - my journey, skills, and what drives me."
+            TitleClassName="text-4xl md:text-5xl mb-4"
+            descriptionClassName="text-lg text-slate-400"
+          />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">

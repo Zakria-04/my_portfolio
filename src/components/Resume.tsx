@@ -8,6 +8,7 @@ import {
   FiLayers,
 } from "react-icons/fi";
 import Badge from "./Badge";
+import SectionHeader from "./SectionHeader";
 
 const Resume = () => {
   const skills = [
@@ -32,16 +33,13 @@ const Resume = () => {
             text="PROFESSIONAL SUMMARY"
             className="text-blue-500 py-1 px-3 mb-4"
           />
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            My <span className="text-blue-400">Resume</span>
-          </h2>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-slate-400">
-              Self-taught full-stack developer with extensive project
-              experience, specializing in modern web technologies and clean,
-              scalable architecture.
-            </p>
-          </div>
+          <SectionHeader
+            title="My"
+            highlightedText="Resume"
+            description="Self-taught full-stack developer with extensive project experience, specializing in modern web technologies and clean, scalable architecture."
+            TitleClassName="text-4xl md:text-5xl mb-4"
+            descriptionClassName="text-lg text-slate-400 max-w-2xl mx-auto"
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
