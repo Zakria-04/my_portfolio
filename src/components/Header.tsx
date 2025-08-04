@@ -27,12 +27,12 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link id="home" href="#home">
+            <button id="home" onClick={() => smoothScroll("#home")} className="cursor-pointer">
               <h1 className="text-2xl font-bold text-white">
                 <span className="text-blue-400">Z</span>akaria
                 <span className="text-blue-400">.</span>
               </h1>
-            </Link>
+            </button>
           </motion.div>
 
           {/* Desktop Navigation */}

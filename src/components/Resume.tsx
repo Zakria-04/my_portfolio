@@ -7,6 +7,7 @@ import {
   FiCode,
   FiLayers,
 } from "react-icons/fi";
+import Badge from "./Badge";
 
 const Resume = () => {
   const skills = [
@@ -27,9 +28,10 @@ const Resume = () => {
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-500 bg-blue-500/10 rounded-full">
-            PROFESSIONAL SUMMARY
-          </span>
+          <Badge
+            text="PROFESSIONAL SUMMARY"
+            className="text-blue-500 py-1 px-3 mb-4"
+          />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             My <span className="text-blue-400">Resume</span>
           </h2>

@@ -1,8 +1,8 @@
-export const smoothScroll = (targetId) => {
+export const smoothScroll = (targetId: string) => {
   const target = document.querySelector(targetId);
-  if (target) {
+  if (target instanceof HTMLElement) {
     window.scrollTo({
-      top: target.offsetTop - 80, // Adjust for header height
+      top: target.offsetTop - 80,
       behavior: 'smooth'
     });
   }

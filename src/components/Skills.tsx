@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { skillsData } from "@/assets/data/skillsData";
 import { FiCode, FiLayers, FiCpu, FiDatabase } from "react-icons/fi";
+import Badge from "./Badge";
 
 const Skills = () => {
   const getLevelWidth = (level: string) => {
@@ -69,9 +70,11 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-500 bg-blue-500/10 rounded-full">
-            TECHNICAL SKILLS
-          </span>
+          <Badge
+            text="TECHNICAL SKILLS"
+            className="text-blue-500 py-1 px-3 mb-4"
+          />
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             My <span className="text-blue-400">Expertise</span>
           </h2>

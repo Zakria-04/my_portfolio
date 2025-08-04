@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiCode, FiCpu, FiTrendingUp } from "react-icons/fi";
 import Link from "next/link";
+import Badge from "./Badge";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -12,7 +13,7 @@ const containerVariants = {
       delayChildren: 0.3,
     },
   },
-};
+} as const;
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -24,7 +25,7 @@ const itemVariants = {
       ease: [0.6, -0.05, 0.01, 0.99],
     },
   },
-};
+} as const;
 
 const fadeInVariant = {
   hidden: { opacity: 0 },
@@ -32,7 +33,26 @@ const fadeInVariant = {
     opacity: 1,
     transition: { duration: 0.8 },
   },
-};
+} as const;
+
+const expertise = [
+  {
+    icon: <FiCode className="w-6 h-6" />,
+    title: "Frontend Expertise",
+    description: "React, TypeScript, Next.js, and modern CSS frameworks",
+  },
+  {
+    icon: <FiCpu className="w-6 h-6" />,
+    title: "Backend Skills",
+    description: "Node.js, Express, MongoDB, TypeScript, and REST APIs",
+  },
+  {
+    icon: <FiTrendingUp className="w-6 h-6" />,
+    title: "Growth Mindset",
+    description:
+      "Driven by curiosity—always exploring new technologies and ready to tackle any challenge that helps me grow as a developer.",
+  },
+];
 
 const Content = () => {
   return (
@@ -46,12 +66,11 @@ const Content = () => {
         animate="visible"
       >
         <div className="max-w-3xl mx-auto text-center">
-          <motion.span
-            className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider text-blue-400 bg-blue-500/10 rounded-full"
+          <Badge
+            text="FULL-STACK DEVELOPER"
             variants={itemVariants}
-          >
-            FULL-STACK DEVELOPER
-          </motion.span>
+            className="text-blue-400 tracking-wider py-1.5 px-4 mb-6"
+          />
 
           <motion.h1
             className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -92,26 +111,7 @@ const Content = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 max-w-5xl mx-auto"
           variants={fadeInVariant}
         >
-          {[
-            {
-              icon: <FiCode className="w-6 h-6" />,
-              title: "Frontend Expertise",
-              description:
-                "React, TypeScript, Next.js, and modern CSS frameworks",
-            },
-            {
-              icon: <FiCpu className="w-6 h-6" />,
-              title: "Backend Skills",
-              description:
-                "Node.js, Express, MongoDB, TypeScript, and REST APIs",
-            },
-            {
-              icon: <FiTrendingUp className="w-6 h-6" />,
-              title: "Growth Mindset",
-              description:
-                "Driven by curiosity—always exploring new technologies and ready to tackle any challenge that helps me grow as a developer.",
-            },
-          ].map((item, index) => (
+          {expertise.map((item, index) => (
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/30 transition-all"

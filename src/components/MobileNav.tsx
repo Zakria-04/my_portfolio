@@ -1,3 +1,4 @@
+import { smoothScroll } from "@/assets/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -24,14 +25,17 @@ const MobileNav = ({ navData, isOpen, setIsOpen }: MobileNavProps) => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.1 * index }}
           >
-            <Link href={item.href}>
+            <button>
               <motion.a
                 className="block py-2 text-slate-300 hover:text-white text-lg font-medium"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  smoothScroll(item.href);
+                  setIsOpen(false);
+                }}
               >
                 {item.name}
               </motion.a>
-            </Link>
+            </button>
           </motion.li>
         ))}
       </ul>

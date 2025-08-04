@@ -22,9 +22,9 @@ const page = () => {
       <Projects />
       <Links />
 
-      {showGreeting && (
+      {/* {showGreeting && (
         <GreetingModal onClose={() => setShowGreeting(false)} />
-      )}
+      )} */}
     </motion.div>
   );
 };

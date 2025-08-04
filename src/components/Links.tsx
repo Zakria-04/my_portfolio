@@ -8,6 +8,7 @@ import {
   FiFileText,
 } from "react-icons/fi";
 import { SiLeetcode, SiCodepen } from "react-icons/si";
+import Badge from "./Badge";
 
 const Links = () => {
   const socialLinks = [
@@ -25,13 +26,6 @@ const Links = () => {
       color: "from-blue-700 to-blue-900",
       hover: "hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]",
     },
-    // {
-    //   name: "LeetCode",
-    //   icon: <SiLeetcode className="w-5 h-5" />,
-    //   url: "https://leetcode.com/yourprofile",
-    //   color: "from-amber-600 to-amber-800",
-    //   hover: "hover:shadow-[0_0_20px_rgba(255,161,22,0.4)]",
-    // },
     {
       name: "Email",
       icon: <FiMail className="w-5 h-5" />,
@@ -53,9 +47,10 @@ const Links = () => {
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-500 bg-blue-500/10 rounded-full">
-            CONNECT WITH ME
-          </span>
+          <Badge
+            text="CONNECT WITH ME"
+            className="text-blue-500 py-1 px-3 mb-4"
+          />
           <h2 className="text-4xl font-bold text-white mb-4">
             My <span className="text-blue-400">Digital Presence</span>
           </h2>
