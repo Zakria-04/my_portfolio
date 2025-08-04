@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
+import { smoothScroll } from "@/assets/utils";
 
 const navData = [
   { name: "Home", href: "#home" },
@@ -26,7 +27,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="#home">
+            <Link id="home" href="#home">
               <h1 className="text-2xl font-bold text-white">
                 <span className="text-blue-400">Z</span>akaria
                 <span className="text-blue-400">.</span>
@@ -44,7 +45,7 @@ const Header = () => {
             <ul className="flex items-center space-x-8">
               {navData.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href}>
+                  <button onClick={() => smoothScroll(item.href)}>
                     <motion.a
                       className="relative text-slate-300 hover:text-white text-sm font-medium transition-colors"
                       whileHover={{ color: "#ffffff" }}
@@ -56,7 +57,7 @@ const Header = () => {
                         transition={{ duration: 0.3 }}
                       />
                     </motion.a>
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
