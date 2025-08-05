@@ -34,7 +34,7 @@ const socialLinks = [
   {
     name: "Resume",
     icon: <FiFileText className="w-5 h-5" />,
-    url: "/your-resume.pdf",
+    url: "/my_resume.pdf",
     color: "from-emerald-600 to-emerald-800",
     hover: "hover:shadow-[0_0_20px_rgba(5,150,105,0.4)]",
     download: true,

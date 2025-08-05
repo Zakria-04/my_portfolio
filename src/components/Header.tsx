@@ -7,6 +7,7 @@ import { smoothScroll } from "@/assets/utils";
 const navData = [
   { name: "Home", href: "#home" },
   { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
   { name: "About", href: "#about" },
   { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
@@ -55,11 +56,6 @@ const Header = () => {
                       whileHover={{ color: "#ffffff" }}
                     >
                       {item.name}
-                      <motion.span
-                        className="absolute bottom-0 left-0 w-0 h-px bg-red-400"
-                        whileHover={{ width: "100%" }}
-                        transition={{ duration: 0.3 }}
-                      />
                     </motion.a>
                   </button>
                 </li>
@@ -81,12 +77,7 @@ const Header = () => {
         </div>
 
         <AnimatePresence>
-          {isOpen && (
-            <MobileNav
-              navData={navData}
-              setIsOpen={setIsOpen}
-            />
-          )}
+          {isOpen && <MobileNav navData={navData} setIsOpen={setIsOpen} />}
         </AnimatePresence>
       </div>
     </header>

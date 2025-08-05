@@ -1,4 +1,4 @@
-import { smoothScroll } from "@/assets/utils";
+import { smoothScrollPromise } from "@/assets/utils";
 import { motion } from "framer-motion";
 
 interface MobileNavProps {
@@ -7,8 +7,8 @@ interface MobileNavProps {
 }
 
 const MobileNav = ({ navData, setIsOpen }: MobileNavProps) => {
-  const onNavItemClick = (href: string) => {
-    smoothScroll(href);
+  const onNavItemClick = async (href: string) => {
+    await smoothScrollPromise(href);
     setIsOpen(false);
   };
 
@@ -28,11 +28,8 @@ const MobileNav = ({ navData, setIsOpen }: MobileNavProps) => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.1 * index }}
           >
-            <button>
-              <motion.a
-                className="block py-2 text-slate-300 hover:text-white text-lg font-medium"
-                onClick={() => onNavItemClick(item.href)}
-              >
+            <button onClick={() => onNavItemClick(item.href)}>
+              <motion.a className="block py-2 text-slate-300 hover:text-white text-lg font-medium">
                 {item.name}
               </motion.a>
             </button>

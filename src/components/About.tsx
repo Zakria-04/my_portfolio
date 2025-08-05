@@ -11,7 +11,7 @@ const aboutData = [
       "I'm a full-stack developer with hands-on experience in building web apps using React, TypeScript, and Node.js. I've worked on real-world SaaS projects, mentored students, and love creating clean, scalable code.",
     icon: <FiUser className="w-5 h-5" />,
     highlights: [
-      "3+ years development experience",
+      "2+ years development experience",
       "Specialized in JavaScript ecosystem",
       "Production-level SaaS experience",
     ],
@@ -19,12 +19,12 @@ const aboutData = [
   {
     title: "Why Choose Me?",
     content:
-      "While I don't hold a formal computer science degree, I've built real production-level apps like jelofy.com, taught others, and continuously learn and improve. My code is clean, my workflow is collaborative, and I've already proven I can deliver real solutions.",
+      "I may not hold a formal computer science degree, but programming has been my passion since school. From a young age, I’ve been building, exploring, and pushing myself to learn. I’ve built real-world apps like Jelofy.com, mentored others, and always rise to challenges with a determination to finish what I start. I write clean, maintainable code and thrive in collaborative environments.",
     icon: <FiAward className="w-5 h-5" />,
     highlights: [
-      "Proven track record with real projects",
-      "Strong problem-solving skills",
-      "Continuous learner & adapter",
+      "Real-world projects in production",
+      "Passionate self-taught developer",
+      "Resilient problem-solver & mentor",
     ],
   },
 ];

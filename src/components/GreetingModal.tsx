@@ -17,6 +17,7 @@ const GreetingModal = ({ onClose, show }: GreetingModalProps) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
+          onClick={onClose}
         >
           <motion.div
             key="modal-content"

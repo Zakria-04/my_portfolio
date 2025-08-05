@@ -10,18 +10,39 @@ import {
 import Badge from "./Badge";
 import SectionHeader from "./SectionHeader";
 
-const Resume = () => {
-  const skills = [
-    {
-      category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"],
-    },
-    {
-      category: "Backend",
-      items: ["Node.js", "Express", "MongoDB", "TypeScript", "NoSQL"],
-    },
-  ];
+const SkillsCategories = [
+  {
+    category: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "Express", "MongoDB", "TypeScript", "NoSQL"],
+  },
+];
 
+const skills = [
+  {
+    title: "Experience",
+    label:
+      "Hands-on experience building and deploying real-world applications, including personal and client projects.",
+    icon: <FiAward className="w-6 h-6" />,
+  },
+  {
+    title: "Projects",
+    label:
+      "5+ completed projects including SaaS platforms, e-commerce, and web apps.",
+    icon: <FiCode className="w-6 h-6" />,
+  },
+  {
+    title: "Technologies",
+    label:
+      "Skilled in the JavaScript/TypeScript ecosystem – React, Node.js, Next.js, MongoDB, and cloud services.",
+    icon: <FiLayers className="w-6 h-6" />,
+  },
+];
+
+const Resume = () => {
   return (
     <section
       id="resume"
@@ -43,42 +64,24 @@ const Resume = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/30 transition-all">
-            <div className="inline-flex items-center justify-center w-14 h-14 mb-6 bg-blue-500/10 rounded-lg text-blue-400">
-              <FiAward className="w-6 h-6" />
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/30 transition-all"
+            >
+              <div className="inline-flex items-center justify-center w-14 h-14 mb-6 bg-blue-500/10 rounded-lg text-blue-400">
+                {skill.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {skill.title}
+              </h3>
+              <p className="text-slate-400">{skill.label}</p>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Experience</h3>
-            <p className="text-slate-400">
-              2+ years building production applications for startups and
-              freelance clients.
-            </p>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/30 transition-all">
-            <div className="inline-flex items-center justify-center w-14 h-14 mb-6 bg-blue-500/10 rounded-lg text-blue-400">
-              <FiCode className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Projects</h3>
-            <p className="text-slate-400">
-              20+ completed projects including SaaS platforms, e-commerce, and
-              web apps.
-            </p>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-blue-500/30 transition-all">
-            <div className="inline-flex items-center justify-center w-14 h-14 mb-6 bg-blue-500/10 rounded-lg text-blue-400">
-              <FiLayers className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Technologies</h3>
-            <p className="text-slate-400">
-              Full-stack expertise with focus on JavaScript ecosystem and cloud
-              infrastructure.
-            </p>
-          </div>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {skills.map((skillGroup, index) => (
+          {SkillsCategories.map((skillGroup, index) => (
             <div
               key={index}
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
