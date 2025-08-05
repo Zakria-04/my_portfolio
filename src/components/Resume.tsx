@@ -49,7 +49,7 @@ const Resume = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Experience</h3>
             <p className="text-slate-400">
-              3+ years building production applications for startups and
+              2+ years building production applications for startups and
               freelance clients.
             </p>
           </div>
@@ -103,7 +103,7 @@ const Resume = () => {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/Zakaria_Abdelghani_Resume.pdf"
+              href="https://docs.google.com/document/d/1Y5JG-v_i2KWBlka3KckQosuUfRJJosI3iK2H9p1YcHk/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all"
@@ -112,7 +112,7 @@ const Resume = () => {
               View Full Resume
             </Link>
             <Link
-              href="/Zakaria_Abdelghani_Resume.pdf"
+              href="/my_resume.pdf"
               download
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-transparent hover:bg-slate-800 border border-slate-600 rounded-lg transition-all"
             >
