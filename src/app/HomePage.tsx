@@ -9,6 +9,7 @@ import Resume from "@/components/Resume";
 import Projects from "@/components/Projects";
 import Links from "@/components/Links";
 import GreetingModal from "@/components/GreetingModal";
+import WorkExperience from "@/components/WorkExperience";
 
 const HomePage = () => {
   const [showGreeting, setShowGreeting] = useState(false);
@@ -26,6 +27,7 @@ const HomePage = () => {
       <Header />
       <Content />
       <Skills />
+      <WorkExperience />
       <About />
       <Resume />
       <Projects />
