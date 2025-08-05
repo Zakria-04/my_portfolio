@@ -5,17 +5,69 @@ import Link from "next/link";
 import Badge from "./Badge";
 import SectionHeader from "./SectionHeader";
 import Image from "next/image";
+import { smoothScroll } from "@/assets/utils";
+import { Images } from "@/assets/images";
 
 const projectsData = [
   {
     id: 1,
-    title: "portfolio website",
+    title: "Portfolio Website",
     description: "Personal portfolio website showcasing my projects and skills",
-    tags: ["React", "Next.js", "Tailwind CSS"],
-    image: "/portfolio.jpg",
-    github: "#",
-    live: "#",
+    tags: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+    image: Images.portfolio_project,
+    github_1: "https://github.com/Zakria-04/my_portfolio",
+    github_2: "",
+    live: "https://portfolio-topaz-alpha-a6rayz79j1.vercel.app/",
     category: "frontend",
+  },
+  {
+    id: 2,
+    title: "Jelofy.com",
+    description:
+      "SaaS platform for restaurants to create customizable digital menus with QR codes. Features include menu item management, design customization, authentication, and payment integration.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Redux",
+      "Tailwind",
+      "Paddle",
+      "Resend",
+      "Google Auth",
+      "SaaS",
+    ],
+    image: Images.jelofy,
+    github_1: "https://github.com/Zakria-04/jelofy_v1_demo",
+    github_2: "https://github.com/Zakria-04/jelofy_v1_demo-server",
+    live: "https://jelofy.com",
+    category: "fullstack",
+  },
+  {
+    id: 3,
+    title: "Chat Simulator",
+    description:
+      "Chat application simulating real-time messaging for mobile devices using React Native and Socket.IO",
+    tags: ["React Native", "Typescript", "Node.js", "Socket.io", "Express"],
+    image: Images.chat_simulator,
+    github_1: "https://github.com/Zakria-04/chat-simulator",
+    github_2: "https://github.com/Zakria-04/chat-simulator_server",
+    live: "",
+    category: "fullstack",
+  },
+  {
+    id: 4,
+    title: "My Diary",
+    description:
+      "A personal diary application for jotting down thoughts and experiences.",
+    tags: ["React", "Typescript", "Node.js", "Express", "MongoDB"],
+    image: Images.diary_app,
+    github_1: "https://github.com/Zakria-04/next-diary-app",
+    github_2: "https://github.com/Zakria-04/diary_server",
+    live: "",
+    category: "fullstack",
   },
 ];
 
@@ -79,11 +131,21 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent lg:opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-3">
-                    {project.github && (
+                    {project.github_1 && (
                       <Link
-                        href={project.github}
+                        href={project.github_1}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors"
+                      >
+                        <FiGithub className="w-4 h-4" />
+                      </Link>
+                    )}
+                    {project.github_2 && (
+                      <Link
+                        href={project.github_2}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 bg-slate-800 rounded-full text-white hover:bg-blue-600 transition-colors"
@@ -129,7 +191,7 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <motion.a
-            href="#contact"
+            onClick={() => smoothScroll("#contact")}
             className="inline-flex items-center px-6 py-3.5 text-sm font-medium bg-transparent text-white border border-slate-600 rounded-lg hover:bg-slate-800 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

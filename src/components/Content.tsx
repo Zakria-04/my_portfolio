@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiCode, FiCpu, FiTrendingUp } from "react-icons/fi";
-import Link from "next/link";
 import Badge from "./Badge";
 import SectionHeader from "./SectionHeader";
+import { smoothScroll } from "@/assets/utils";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -88,18 +88,18 @@ const Content = () => {
             className="flex flex-wrap justify-center gap-4"
             variants={fadeInVariant}
           >
-            <Link
-              href="#projects"
+            <button
+              onClick={() => smoothScroll("#projects")}
               className="px-8 py-3.5 text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300"
             >
               View My Work
-            </Link>
-            <Link
-              href="#contact"
+            </button>
+            <button
+              onClick={() => smoothScroll("#contact")}
               className="px-8 py-3.5 text-sm font-medium text-white bg-transparent hover:bg-slate-800 border border-slate-600 rounded-lg transition-all duration-300"
             >
               Get In Touch
-            </Link>
+            </button>
           </motion.div>
         </div>
 

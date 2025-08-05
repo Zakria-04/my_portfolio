@@ -7,6 +7,11 @@ interface MobileNavProps {
 }
 
 const MobileNav = ({ navData, setIsOpen }: MobileNavProps) => {
+  const onNavItemClick = (href: string) => {
+    smoothScroll(href);
+    setIsOpen(false);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, height: 0 }}
@@ -26,10 +31,7 @@ const MobileNav = ({ navData, setIsOpen }: MobileNavProps) => {
             <button>
               <motion.a
                 className="block py-2 text-slate-300 hover:text-white text-lg font-medium"
-                onClick={() => {
-                  smoothScroll(item.href);
-                  setIsOpen(false);
-                }}
+                onClick={() => onNavItemClick(item.href)}
               >
                 {item.name}
               </motion.a>

@@ -6,8 +6,9 @@ import { smoothScroll } from "@/assets/utils";
 
 const navData = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
+  { name: "About", href: "#about" },
+  { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -50,7 +51,7 @@ const Header = () => {
                 <li key={item.name}>
                   <button onClick={() => smoothScroll(item.href)}>
                     <motion.a
-                      className="relative text-slate-300 hover:text-white text-sm font-medium transition-colors"
+                      className="relative text-slate-300 hover:text-white text-sm font-medium transition-colors cursor-pointer"
                       whileHover={{ color: "#ffffff" }}
                     >
                       {item.name}
